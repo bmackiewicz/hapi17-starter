@@ -1,0 +1,53 @@
+{
+  "name": "hapi-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "clean": "rimraf coverage build tmp",
+    "start": "node build/index",
+    "build": "tsc -p tsconfig.release.json",
+    "watch": "tsc -w -p tsconfig.release.json",
+    "dev": "npm run build && npm start",
+    "lint": "tslint -p tsconfig.release.json -t stylish '{src,__tests__}/**/*.{ts,tsx}'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hapijs",
+    "api"
+  ],
+  "author": "Bogdan Mackiewicz <bogdan@mackiewicz.in>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "config": "1.30.0",
+    "good": "8.1.1",
+    "good-console": "7.1.0",
+    "good-squeeze": "5.1.0",
+    "hapi": "17.5.1",
+    "hapi-raven": "7.0.0",
+    "hapi-router": "4.0.0",
+    "hapi-swagger": "9.1.1",
+    "inert": "5.1.0",
+    "joi": "13.4.0",
+    "lodash": "4.17.10",
+    "moment": "2.22.2",
+    "request": "2.87.0",
+    "typeorm": "0.2.7",
+    "vision": "5.3.3"
+  },
+  "devDependencies": {
+    "@types/config": "0.0.34",
+    "@types/hapi": "17.0.12",
+    "@types/joi": "13.0.8",
+    "@types/lodash": "4.14.109",
+    "@types/moment": "2.13.0",
+    "@types/node": "10.3.2",
+    "@types/request": "2.47.0",
+    "rimraf": "2.6.2",
+    "tslib": "1.9.2",
+    "tslint": "5.10.0",
+    "tslint-microsoft-contrib": "5.0.3",
+    "typescript": "2.9.1"
+  }
+}

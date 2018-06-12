@@ -17,6 +17,7 @@
     "api"
   ],
   "author": "Bogdan Mackiewicz <bogdan@mackiewicz.in>",
+  "git": "git@gitlab.com:bober86/hapi17-starter.git",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
@@ -32,6 +33,8 @@
     "joi": "13.4.0",
     "lodash": "4.17.10",
     "moment": "2.22.2",
+    "mongodb": "2.2.35",
+    "reflect-metadata": "0.1.12",
     "request": "2.87.0",
     "typeorm": "0.2.7",
     "vision": "5.3.3"

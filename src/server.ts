@@ -12,8 +12,9 @@ export async function init() {
     routes: serverRoutesConfig,
   });
   await server.register(<any>plugins);
-  await server.route(routes);
   await server.auth.strategy('jwt', 'jwt', jwtStrategy);
   await server.auth.default('jwt');
+  await server.route(routes);
+
   return server;
 }

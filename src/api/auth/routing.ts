@@ -1,13 +1,13 @@
-import { IRouting } from '../../interfaces/routing';
 import { testHandler } from './handlers/login';
 import { loginValidate } from './validators/login';
+import { ServerRoute } from 'hapi';
 
-const authRouting: IRouting[] = [
+export const authRouting: ServerRoute[] = [
   {
     method: 'POST',
     path: '/auth/login',
     handler: testHandler,
-    config: {
+    options: {
       auth: false,
       description: 'login user',
       tags: ['api', 'login'],
@@ -15,5 +15,3 @@ const authRouting: IRouting[] = [
     },
   },
 ];
-
-export { authRouting };

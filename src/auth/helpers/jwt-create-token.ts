@@ -5,13 +5,12 @@ import { sign } from 'jsonwebtoken';
 const version: string = require('../../../package.json').version; // tslint:disable-line
 
 function createToken(
-  userId: string,
   username: string,
   role: string,
 ): string {
   return sign(<IJwtToken>{
-    user: { id: userId, username, role },
-    aud: userId,
+    user: { username, type: 'user', role },
+    aud: '',
     iss: `api/${version}`,
   }, get<string>('authentication.secret'), {
     algorithm: 'HS256',

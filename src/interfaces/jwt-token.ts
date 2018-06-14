@@ -1,5 +1,5 @@
 export interface IJwtToken {
-    user: { id: string, username: string, role: string, shops: string[], sapid: string };
+    user: { username: string, role: string, type: string };
     aud: string | null;
     iss: string;
     iat?: number;

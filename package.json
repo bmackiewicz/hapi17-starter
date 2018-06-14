@@ -17,6 +17,7 @@
     "api"
   ],
   "author": "Bogdan Mackiewicz <bogdan@mackiewicz.in>",
+  "git": "git@gitlab.com:bober86/hapi17-starter.git",
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
@@ -25,13 +26,17 @@
     "good-console": "7.1.0",
     "good-squeeze": "5.1.0",
     "hapi": "17.5.1",
+    "hapi-auth-jwt2": "8.1.0",
     "hapi-raven": "7.0.0",
     "hapi-router": "4.0.0",
     "hapi-swagger": "9.1.1",
     "inert": "5.1.0",
     "joi": "13.4.0",
+    "jsonwebtoken": "8.3.0",
     "lodash": "4.17.10",
     "moment": "2.22.2",
+    "mongodb": "^3.0.8",
+    "reflect-metadata": "0.1.12",
     "request": "2.87.0",
     "typeorm": "0.2.7",
     "vision": "5.3.3"
@@ -39,7 +44,9 @@
   "devDependencies": {
     "@types/config": "0.0.34",
     "@types/hapi": "17.0.12",
+    "@types/hapi-auth-jwt2": "8.0.1",
     "@types/joi": "13.0.8",
+    "@types/jsonwebtoken": "7.2.7",
     "@types/lodash": "4.14.109",
     "@types/moment": "2.13.0",
     "@types/node": "10.3.2",

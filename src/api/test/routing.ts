@@ -1,13 +1,23 @@
-import { IRouting } from '../../interfaces/routing';
 import { testHandler } from './handlers/test';
+import { ServerRoute } from 'hapi';
 
-const testRouting: IRouting[] = [
+const testRouting: ServerRoute[] = [
   {
     method: 'GET',
     path: '/test',
     handler: testHandler,
-    config: {
+    options: {
       description: 'test',
+      tags: ['api', 'test'],
+    },
+  },
+  {
+    method: 'GET',
+    path: '/test/login',
+    handler: testHandler,
+    options: {
+      auth: 'jwt',
+      description: 'test login',
       tags: ['api', 'test'],
     },
   },

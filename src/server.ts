@@ -3,6 +3,7 @@ import * as config from 'config';
 import { routes } from './api/routing';
 import * as plugins from './plugins/index';
 import { serverRoutesConfig } from './helpers/server-connection-options';
+import * as jwtStrategy from './auth/strategies/jwt';
 
 export async function init() {
   const server: Server = new Server({
@@ -11,7 +12,8 @@ export async function init() {
     routes: serverRoutesConfig,
   });
   await server.register(<any>plugins);
-  server.route(routes);
-
+  await server.route(routes);
+  await server.auth.strategy('jwt', 'jwt', jwtStrategy);
+  await server.auth.default('jwt');
   return server;
 }

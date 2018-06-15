@@ -3,6 +3,7 @@ import * as goodPlugin from 'good';
 import * as vision from 'vision';
 import * as inert from 'inert';
 import * as hapiSwagger from 'hapi-swagger';
+import * as hapiAuthJwt2 from 'hapi-auth-jwt2';
 
 const version: string = require('../../package.json').version; // tslint:disable-line
 
@@ -13,6 +14,7 @@ let plugins: any[] = [
   },
   vision,
   inert,
+  hapiAuthJwt2,
   {
     plugin: hapiSwagger,
     options: {
@@ -22,6 +24,14 @@ let plugins: any[] = [
         title: 'API auto-generated docs',
         version,
       },
+      securityDefinitions: {
+        Bearer: {
+          type: 'apiKey',
+          name: 'Authorization',
+          in: 'header',
+        },
+      },
+      security: [{ Bearer: [] }],
     },
   },
 ];

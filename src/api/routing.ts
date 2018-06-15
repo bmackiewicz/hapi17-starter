@@ -1,7 +1,10 @@
-import { testRouting } from './test/routing';
+import { ServerRoute } from 'hapi';
+import { authRouting } from './auth/routing';
+import { usersRouting } from './users/routing';
 
-const routes: any = [].concat(
-  testRouting,
+const routes: ServerRoute[] = [].concat(
+  authRouting,
+  usersRouting,
 );
 
 export { routes };

@@ -1,10 +1,9 @@
 import { getRepository } from 'typeorm';
 import { User } from '../../../entity/user';
 
-export async function createUser(data: User): Promise<User> {
+export async function listsUser(): Promise<User[]> {
     try {
-        const result: User = await getRepository(User).save(data);
-        return result;
+        return getRepository(User).find();
     } catch (e) {
         throw new Error(e.message);
     }

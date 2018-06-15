@@ -1,7 +1,11 @@
 const version = require('../package.json').version;
 
 module.exports = {
-  environment: 'staging',
+  environment: 'development',
+  defaultUser: {
+    username: 'user',
+    password: 'user'
+  },
   good: {
     ops: {
       interval: 1000,

@@ -24,6 +24,14 @@ let plugins: any[] = [
         title: 'API auto-generated docs',
         version,
       },
+      securityDefinitions: {
+        Bearer: {
+          type: 'apiKey',
+          name: 'Authorization',
+          in: 'header',
+        },
+      },
+      security: [{ Bearer: [] }],
     },
   },
 ];

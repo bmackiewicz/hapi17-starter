@@ -4,8 +4,10 @@ import { Entity, Column, ObjectID, ObjectIdColumn } from 'typeorm';
 export class User {
 
   @ObjectIdColumn()
-  id?: ObjectID;
+  public _id?: ObjectID;
   @Column()
-  public login: string;
+  public username: string;
+  @Column()
+  public password: string;
 
 }

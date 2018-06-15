@@ -5,7 +5,7 @@ import * as plugins from './plugins/index';
 import { serverRoutesConfig } from './helpers/server-connection-options';
 import * as jwtStrategy from './auth/strategies/jwt';
 
-export async function init() {
+export async function init(): Promise<Server> {
   const server: Server = new Server({
     host: config.get<string>('server.host'),
     port: config.get<number>('server.port'),

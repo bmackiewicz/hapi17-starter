@@ -2,7 +2,7 @@ import * as Api from './server';
 import { Server } from 'hapi';
 import 'reflect-metadata';
 import { createConnection } from 'typeorm';
-import { get } from "config";
+import { get } from 'config';
 
 async function start(): Promise<void> {
     try {

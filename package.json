@@ -17,8 +17,8 @@
     "api"
   ],
   "author": "Bogdan Mackiewicz <bogdan@mackiewicz.in>",
-  "git": "git@gitlab.com:bober86/hapi17-starter.git",
-  "license": "UNLICENSED",
+  "git": "git@gitlab.com:bmackiewicz/hapi17-starter.git",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "config": "1.30.0",
